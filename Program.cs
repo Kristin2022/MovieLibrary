@@ -84,6 +84,11 @@ do
     }
 } while (!exit);
 
+void RemoveDuplicates()
+{
+    throw new NotImplementedException();
+}
+
 void LoadExistingMovies()
 {
     if(File.Exists(path_))
@@ -91,7 +96,7 @@ void LoadExistingMovies()
         var lines = File.ReadAllLines(path_);
         foreach(var line in lines)
         {
-            items.Add(line)
+            items.Add(line);
            // var movieSplitLine = line.Split(',');
            // items.Add(movieSplitLine[1].Trim());
         }
@@ -102,7 +107,7 @@ void ViewMovies()
 {
     try
     {
-        //string path = Directory.GetCurrentDirectory() + "\\movies.csv"; //Updated path "movies.csv";
+        //string path = Directory.GetCurrentDirectory(); + "\\movies.csv"; //Updated path "movies.csv";
         var lines = File.ReadAllLines(path_); 
         foreach (var line in lines )
         {
